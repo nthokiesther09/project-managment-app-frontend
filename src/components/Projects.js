@@ -80,7 +80,7 @@ const Projects = () => {
         {projects.map(project => (
           <div className='project' key={project.id}>
             <p>No: {project.id}</p>
-            <p>Title: {project.title}</p>
+            <p><h4>Title: {project.title}</h4></p>
             <p>Progress: {project.progress}</p>
             <p>Timeframe: {project.timeframe}</p>
             <p>created_at: {project.created_at}</p>
