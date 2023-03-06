@@ -1,144 +1,68 @@
-/* :root {
-  --main-bg-color: rgb(255, 248, 231);
-  --main-font-color: rgb(0, 0, 0);
-  --theme-primary: rgb(69, 27, 254);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
 body {
-  margin: 0;
+  background-color: darksalmon;
+  margin:0;
   padding: 0;
 }
 
-body {
-  font-family: "Prompt", sans-serif;
-  background-color: var(--main-bg-color);
+
+.projects_list h2 {
+  text-align: center;
+
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Sriracha", cursive;
-  margin-bottom: 0.75em;
+.main h1{
+  text-align: center;
+  font-style: italic;
+
 }
 
-.card {
-  margin: 2rem 0;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.links a {
+  text-decoration: none;
+  padding:10px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color:black
 }
 
-header {
-  width: 100%;
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.projects_card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 13%;
+}
+.project {
+  background-color: blue;
+  margin:5px;
+  border-radius:5px;
+}
+
+.project p {
+  text-align:center;
+  
+}
+.btn {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem;
-  background-color: var(--theme-primary);
-  color: var(--main-font-color);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  padding:6px;
 }
-
-header h1,
-header h3 {
-  margin: 0;
+ button:hover { 
+background-color: brown;
+cursor: pointer;
 }
-
-.filters {
+button {
+  border-radius: 4px;
+  padding:2px;
+}
+.members {
   display: flex;
-  align-items: center;
+  padding:10px;
 }
-
-.filters input[type="text"] {
-  font-size: 14px;
-  padding: 0.25rem;
-  margin: 0 1rem 0 0.25rem;
+.members_list {
+  margin-left:10px;
 }
-
-main {
-  width: 80vw;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.spice-item {
-  display: flex;
-  align-items: flex-start;
-}
-
-.project img {
-  max-width: 400px;
-  object-fit: contain;
-}
-
-.project .details {
-  margin-left: 1rem;
-  position: relative;
-}
-
-.project .details h2 {
-  margin-top: 0;
-}
-
-.spice-item .favorite {
-  position: absolute;
-  font-size: 2rem;
-  bottom: 0;
-  right: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.project.favorite:focus {
-  outline: none;
-}
-
-.project .favorite span {
-  color: transparent;
-  text-shadow: 0 0 0 var(--theme-primary);
-}
-
-.project .details p {
-  margin: 0.75rem 0;
-}
-
-.star-rating {
-  color: rgba(0, 0, 0, 0.1);
-  font-size: 1.5rem;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.star-rating .foreground {
-  color: var(--theme-primary);
-  position: absolute;
-  display: flex;
-  overflow: hidden;
-}
-
-.star-rating .background {
-  display: flex;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input,
-form textarea {
-  margin-bottom: 0.5rem;
-}
-
-form button[type="submit"] {
-  width: 150px;
-} */

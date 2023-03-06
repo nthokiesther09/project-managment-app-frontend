@@ -4,9 +4,9 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    // Fetch list of projects from the API
+    // Fetching projects 
     fetch('http://localhost:9292/projects')
-      .then(response => response.json())
+      .then(resp => resp.json())
       .then(data => setProjects(data))
       .catch(error => console.log(error));
   }, []);
@@ -16,8 +16,8 @@ const Projects = () => {
     fetch(`http://localhost:9292/projects/${id}`, {
       method: 'DELETE'
     })
-      .then(response => {
-        if (response.ok) {
+      .then(resp => {
+        if (resp.ok) {
           setProjects(projects.filter(project => project.id !== id));
         }
       })
@@ -56,9 +56,9 @@ const Projects = () => {
   const [members, setMembers] = useState([]);
 
   useEffect(() => {
-    // Fetch list of members from the API
+    // Fetching members 
     fetch('http://localhost:9292/members')
-      .then(response => response.json())
+      .then(resp => resp.json())
       .then(data => setMembers(data))
       .catch(error => console.log(error));
   }, []);
@@ -74,31 +74,30 @@ const Projects = () => {
   }
 
   return (
-    <div className='projects'>
+    <div className='projects_list'>
       <h2>Available Projects</h2>
       <div className='projects_card'>
         {projects.map(project => (
           <div className='project' key={project.id}>
             <p>No: {project.id}</p>
             <p>Title: {project.title}</p>
-           
             <p>Progress: {project.progress}</p>
             <p>Timeframe: {project.timeframe}</p>
             <p>created_at: {project.created_at}</p>
             <p>updated_at: {project.updated_at}</p>
-            <div className='buttons'>
+            <div className='btn'>
               <button onClick={() => handleDelete(project.id)}>Delete</button>
               <button onClick={() => handleProgressUpdate(project.id, 'In Progress')}>
                 InProgress
               </button>
               <button onClick={() => handleProgressUpdate(project.id, 'Complete')}>
-                Mark as Complete
+                Complete
               </button>
              
             </div>
             <div className='members'>
               <h4>Members:</h4>
-              <div>
+              <div className='members_list'>
                 {getRandomMembers(project).map(member => (
                   <p key={member.id}>{member.name}</p>
                 ))}
